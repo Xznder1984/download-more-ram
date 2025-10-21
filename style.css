@@ -1,0 +1,131 @@
+:root {
+  --bg: #1e1e1e;
+  --panel: #252526;
+  --fg: #d4d4d4;
+  --muted: #808080;
+  --accent: #007acc;
+  --accent-2: #0e639c;
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 12px;
+  --font: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #151515);
+  color: var(--fg);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+}
+
+.card {
+  width: 720px;
+  max-width: 94vw;
+  background: linear-gradient(180deg, var(--panel), #1c1c1c);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  padding: 28px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h1 { margin: 0; font-size: 20px; }
+p.lead { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+
+.meta {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.meta .bit {
+  background: var(--glass);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--fg);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.14);
+  transition: 0.2s ease;
+}
+
+.btn:hover { background: var(--accent-2); }
+
+.small { font-size: 13px; color: var(--muted); }
+
+.progress-wrap {
+  margin-top: 18px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.progress {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  transition: width 150ms linear;
+}
+
+footer {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  .card { padding: 18px; }
+  .logo { width: 48px; height: 48px; }
+}

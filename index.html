@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download — RAM Booster Labs</title>
+  <meta name="description" content="Download page for the fake 'Download More RAM' app. Minimal, VS Code dark theme." />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="logo">RB</div>
+        <div>
+          <h1>RAM Booster — Download</h1>
+          <p class="lead">Click below to download the app and boost your system instantly (just kidding 😉)</p>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div class="bit">Version <strong id="version">1.0.0</strong></div>
+        <div class="bit">Build: <span id="build">2025-10-21</span></div>
+        <div class="bit">Platform: <span id="platform">Windows</span></div>
+      </div>
+
+      <div class="actions">
+        <button id="downloadBtn" class="btn">Download</button>
+        <div style="margin-left:auto;text-align:right">
+          <div class="small">File size: <code id="filesize">—</code></div>
+          <div class="small">SHA256: <code id="sha256">—</code></div>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="small">Download progress</div>
+        <div class="progress"><i id="bar"></i></div>
+        <div class="small" style="margin-top:8px">Status: <span id="status">idle</span></div>
+      </div>
+
+      <footer>© 2025 RAM Booster Labs — Fake App for Fun. Hosted with ♥ on GitHub Pages.</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
